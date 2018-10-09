@@ -16,7 +16,8 @@
  *           length:  数组长度
  * 函数输出: 无
  * 函数说明: 无
- * 算法导论: P10
+ * 创建时间：2018/10/08
+ *
  */
 void insertion_sort(int A[], int length)
 {

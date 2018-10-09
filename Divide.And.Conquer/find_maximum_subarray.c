@@ -11,6 +11,20 @@
 #include <stdlib.h>
 #include <limits.h>
 
+/*
+ * 函数名称：find_max_crossing_subarray
+ * 函数功能：寻找跨区域的最大子数组
+ * 函数输入：int A[]        : 待查找的数组
+ *           int low        : 待查找数组的起始下标
+ *           int mid        : 待查找数组的中间下标
+ *           int high       : 待查找数组的结束下标
+ * 函数输出：int *max_left  : 找到的跨区域最大子数组的起始下标
+ *           int *max_right : 找到的跨区域最大子数组的结束下标
+ *           int *max_sum   : 找到的跨区域最大子数组的和
+ * 函数说明：无
+ * 创建时间：2018/10/08
+ *
+ */
 void find_max_crossing_subarray(int A[], int low, int mid, int high,
                                 int *max_left, int *max_right, int *max_sum)
 {
@@ -47,6 +61,19 @@ void find_max_crossing_subarray(int A[], int low, int mid, int high,
     *max_sum = left_sum + right_sum;
 }
 
+/*
+ * 函数名称：find_maximum_subarray
+ * 函数功能：寻找最大子数组
+ * 函数输入：int A[]    : 待查找的数组
+ *           int low    : 待查找数组的起始下标
+ *           int high   : 待查找数组的结束下标
+ * 函数输出：int *left  : 找到的最大子数组的起始下标
+ *           int *right : 找到的最大子数组的结束下标
+ *           int *sum   : 找到的最大子数组的和
+ * 函数说明：无
+ * 创建时间：2018/10/08
+ *
+ */
 void find_maximum_subarray(int A[], int low, int high,
                            int *left, int *right, int *sum)
 {

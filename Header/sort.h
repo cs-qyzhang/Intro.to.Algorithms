@@ -25,7 +25,7 @@
  *           == 0 : a == b
  *           <  0 : a < b
  * 函数说明：无
- * 创建时间：18/10/09
+ * 创建时间：2018/10/09
  *
  */
 typedef int (*sort_cmp_fn_t)(const void *, const void *);

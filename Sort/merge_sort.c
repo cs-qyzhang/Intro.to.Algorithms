@@ -11,6 +11,18 @@
 #include <stdlib.h>
 #include <limits.h>
 
+/*
+ * 函数名称：merge
+ * 函数功能：将两个连续的排好序的数组合并为一个数组
+ * 函数输入：int A[] : 所有数据所在的数组(包括两个排好序的数组)
+ *           int p   : 待排序数组起始下标
+ *           int q   : 第一个数组的结束下标
+ *           int r   : 第二个数组的结束下标
+ * 函数输出：int A[] : 排好序后的元素放回原来的A[p]-A[r]中
+ * 函数说明：无
+ * 创建时间：2018/10/08
+ *
+ */
 void merge(int A[], int p, int q, int r)
 {
     int n1 = q - p + 1;
@@ -46,6 +58,17 @@ void merge(int A[], int p, int q, int r)
     }
 }
 
+/*
+ * 函数名称：merge_sort
+ * 函数功能：归并排序
+ * 函数输入：int A[] : 待排序的数组
+ *           int p   : 待排序的数组的起始下标
+ *           int r   : 待排序的数组的结束下标
+ * 函数输出：int A[] : 排好序后的元素放回原来的A[p]-A[r]中
+ * 函数说明：无
+ * 创建时间：2018/10/08
+ *
+ */
 void merge_sort(int A[], int p, int r)
 {
     if (p < r)
