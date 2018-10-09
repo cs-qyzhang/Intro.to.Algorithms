@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-void merge(int **A, int p, int q, int r)
+void merge(int A[], int p, int q, int r)
 {
     int n1 = q - p + 1;
     int n2 = r - q;
@@ -22,9 +22,9 @@ void merge(int **A, int p, int q, int r)
 
     int i, j, k;
     for (i = 0; i < n1; ++i)
-        L[i] = (*A)[p + i];
+        L[i] = A[p + i];
     for (i = 0; i < n2; ++i)
-        R[i] = (*A)[q + i];
+        R[i] = A[q + i];
 
     L[n1] = INT_MAX;
     R[n2] = INT_MAX;
@@ -35,18 +35,18 @@ void merge(int **A, int p, int q, int r)
     {
         if (L[i] <= R[j])
         {
-            *A[k] = L[i];
+            A[k] = L[i];
             ++i;
         }
         else
         {
-            *A[k] = R[j];
+            A[k] = R[j];
             ++j;
         }
     }
 }
 
-void merge_sort(int **A, int p, int r)
+void merge_sort(int A[], int p, int r)
 {
     if (p < r)
     {

@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-void find_max_crossing_subarray(int *A, int low, int mid, int high,
+void find_max_crossing_subarray(int A[], int low, int mid, int high,
                                 int *max_left, int *max_right, int *max_sum)
 {
     /*max_left = (int *)malloc(sizeof(int));*/
