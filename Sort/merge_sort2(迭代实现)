@@ -1,0 +1,47 @@
+ * filename    : merge_sort.c
+ * author      : loveshrimp
+ * created     : 2018/10/09
+ * description : MergeSort Iteration implement
+ * page        : P17
+ 
+//迭代算法
+#include <stdio.h>
+#include<stdlib.h>
+
+void mergesort2(int k[], int n)
+{
+	int i, next;
+	int left_min, left_max, right_min, right_max; //min动而max不动
+	int *temp = (int*)malloc(sizeof(int)*n);
+	for (i = 1; i < n; i *= 2)
+	{
+		for (left_min = 0; left_min < n - i; left_min = right_max)
+		{
+			right_min = left_max = left_min + i;
+			right_max = left_max + i;
+
+			if (right_max > n)
+				right_max = n;
+
+			next = 0;
+
+			while (left_min < left_max && right_min < right_max)
+			{
+				if (k[left_min] < k[right_min])
+					temp[next++] = k[left_min++];
+				else
+					temp[next++] = k[right_min++];
+			}
+
+			while (left_min < left_max)
+			{
+				k[--right_min] = k[--left_max];
+			}
+			while (next > 0)
+			{
+				k[--right_min] = temp[--next];
+			}
+		}
+	}
+
+}
